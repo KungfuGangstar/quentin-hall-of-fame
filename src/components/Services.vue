@@ -45,18 +45,13 @@
             text-xs-center
             mb-3
           >
-            <v-avatar
-              class="elevation-6 mb-2"
-              color="#69A1BB"
-              size="64"
-              tile
-            >
-              <v-icon
-                dark
-                size="52"
-                v-text="service.icon"
+
+              <v-img
+                light
+                width="75px"
+                :src="require('@/assets/' + service.img)"
               />
-            </v-avatar>
+           
             <base-text>
               <div
                 class="mb-2"
@@ -77,22 +72,22 @@ export default {
     services: [
       {
         name: 'PWA',
-        icon: 'mdi-clipboard-text-outline',
+        img: 'pwa.png',
         blurb: 'Rliable, Fast, Engaging Progressive Web Apps'
       },
       {
         name: 'VUE JS',
-        icon: 'mdi-pencil-outline',
+        img: 'vue.png',
         blurb: 'The Progressive JavaScript Framework'
       },
       {
         name: 'NODE JS',
-        icon: 'mdi-settings-outline',
+        img: 'node1.png',
         blurb: 'Fast deployable backend services'
       },
       {
         name: 'PYTHON',
-        icon: 'mdi-account',
+        img: 'python.png',
         blurb: 'AI and Smart Analitics'
       }
     ]

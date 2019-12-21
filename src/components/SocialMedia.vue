@@ -7,6 +7,8 @@
       class="ma-2"
       :large="large"
       color="info"
+      :href="item.href"
+      :target="item.external ? '_blank' : ''"
     >
       <v-icon
         dark
@@ -27,18 +29,30 @@ export default {
 
   data: () => ({
     items: [
+
       {
-        name: 'Twitter',
-        icon: 'mdi-twitter'
+        name: 'Linkedin',
+        icon: 'fa-linkedin',
+        href: "https://www.linkedin.com/in/quentin-mar%C3%A9chal-a0a860a9/",
+        external :true
       },
       {
         name: 'Github',
-        icon: 'fa-github'
+        icon: 'fa-github',
+        href: "https://github.com/KungfuGangstar",
+        external :true
       },
       {
         name: 'Email',
-        icon: 'mdi-email'
-      }
+        icon: 'mdi-email',
+        href: "#get-in-touch"
+      },
+            {
+        name: 'Twitter',
+        icon: 'mdi-twitter',
+        href: "https://twitter.com/KngF_D",
+        external :true
+      },
     ]
   })
 }
