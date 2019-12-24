@@ -34,13 +34,16 @@
           <v-flex
             xs10
             md6
+           :mt-5="$vuetify.breakpoint.smAndDown"
+           :pt-5="$vuetify.breakpoint.smAndDown"
+
           >
             <base-heading>Hi I'm Quentin !</base-heading>
             <base-text>
                <br>
-              Software Engineer for 4 years in the dynamic city of Dublin. <br>
+              Quentin Marechal, French software engineer for 4 years living in Dublin. <br>
               When I got something in mind I go at it hawfull and hard or I go home.
-              I'm a big fan of Bob Ross, Gordon Ramsey, and Paddy Losty.   
+              I'm a big fan of Bob Ross, Gordon Ramsey, and Paddy Losty.
             </base-text>
             <base-btn class="mt-4">
               Learn More!

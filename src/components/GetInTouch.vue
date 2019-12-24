@@ -23,30 +23,27 @@
           color="transparent"
         >
           <v-text-field
+            v-model="name"
             color="info"
             label="Name"
             solo
             flat
           />
           <v-text-field
-            color="info"
-            label="Email"
-            solo
-            flat
-          />
-          <v-text-field
+            v-model="subject"
             color="info"
             label="Subject"
             solo
             flat
           />
           <v-textarea
+          v-model="message"
             color="info"
             label="Message"
             solo
             flat
           />
-          <base-btn>Send</base-btn>
+        <v-btn large :href="mailto">Send</v-btn>
         </v-sheet>
       </v-flex>
             <v-flex
@@ -61,3 +58,18 @@
     </v-layout>
   </section>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      name: "",
+      subject: "",
+      message: ""
+    }),
+    computed:{
+      mailto(){
+        return  "mailto:" + "qmarechal@hotmail.fr?body="+this.message+"&subject="+this.name+ " " + this.subject
+      }
+    }
+  }
+</script>
